@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+    <style>
+    button{
+        height:100px; 
+        width:100px;
+    }
+    div{
+        text-align:center;
+        margin-top:20%;
+    }
+    p{
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .lsg{
+        background-color: lightseagreen;
+    }
+    .lg{
+        background-color: lightgreen;
+    }
+    .ly{
+        background-color: rgb(245, 245, 148);
+    }
+    .lc{
+        background-color: lightcoral;
+    }
+    
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Colour Scheme Switcher</h1>
+    <button style="background-color:lightseagreen;" onclick="changecolor('lsg');"></button>
+
+    <button style="background-color:lightgreen" onclick="changecolor('lg');"></button>
+
+    <button style="background-color:rgb(245, 245, 148);" onclick="changecolor('ly');"></button>
+
+    <button style="background-color:lightcoral;" onclick="changecolor('lc');"></button>
+
+    <p>Try clicking on one of the colors above<br>to change the background color of this page!</p>
+    </div>
+
+    <script>
+        function changecolor(color){
+            document.body.classList.remove('lsg','lg','ly','lc');
+            document.body.classList.add(color);
+        }
+    </script>
+</body>
+</html>
